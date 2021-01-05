@@ -1,0 +1,49 @@
+e<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="refresh" content="1">
+    <title>Gas Monitor</title>
+    <style>
+        body {
+            padding: 100px !important;
+        }
+        .safe {
+            background-color: green;
+            border: none;
+            color: white;
+            text-align: center;
+            font-size: 15px;
+            padding: 15px 30px;
+        }
+
+        .fire {
+            background-color: red;
+            border: none;
+            color: white;
+            text-align: center;
+            font-size: 15px;
+            padding: 15px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Current Gas Value:</h2>
+        <p>
+            <%= gasValue %>
+        </p>
+    </div>
+    <div>
+        <% if(gasValue <= 200){ %>
+            <button class='safe'>Safe</button>
+            <% } else { %>
+                <button class='fire'>Dangerous</button>
+                <% } %>
+    </div>
+</body>
+
+</html>
